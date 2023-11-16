@@ -31,8 +31,8 @@ def move_circle(i, xpos, ypos, vx, vy, canvas_width, canvas_height,
         vy[i] = -vy[i]
 
 
-def initilizing(xpos, ypos, vx, vy, ball_color, canvas_width, canvas_height,
-                ball_radius, num_balls):
+def initializing(xpos, ypos, vx, vy, ball_color, canvas_width, canvas_height,
+                 ball_radius, num_balls):
     # create random number of balls, num_balls, located at
     # random positions within the canvas; each ball has a
     # random velocity value in the x and y direction and is
@@ -44,5 +44,6 @@ def initilizing(xpos, ypos, vx, vy, ball_color, canvas_width, canvas_height,
                                    canvas_height - ball_radius))
         vx.append(random.randint(1, 0.01 * canvas_width))
         vy.append(random.randint(1, 0.01 * canvas_height))
-        ball_color.append((random.randint(0, 255), random.randint(0, 255),
+        ball_color.append((random.randint(0, 255),
+                           random.randint(0, 255),
                            random.randint(0, 255)))
