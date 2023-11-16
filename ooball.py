@@ -1,12 +1,28 @@
+import turtle
+import random
+
+
+def draw_circle(color, size, x, y):
+    # draw a circle of radius equals to size at x, y coordinates and
+    # paint it with color
+    turtle.penup()
+    turtle.color(color)
+    turtle.fillcolor(color)
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.circle(size)
+    turtle.end_fill()
+
+
 class Ball:
-    def __init__(self, xpos, ypos, vx, vy, ball_color,
-                 canvas_width, canvas_height,
+    def __init__(self, canvas_width, canvas_height,
                  ball_radius, num_balls):
-        self.xpos = xpos
-        self.ypos = ypos
-        self.vx = vx
-        self.vy = vy
-        self.ball_color = ball_color
+        self.xpos = []
+        self.ypos = []
+        self.vx = []
+        self.vy = []
+        self.ball_color = []
         self.canvas_width = canvas_width
         self.canvas_height = canvas_height
         self.ball_radius = ball_radius
